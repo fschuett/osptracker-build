@@ -1,0 +1,100 @@
+<?xml version="1.0"?>
+<!DOCTYPE project>
+<project name="tracker" default="tracker_jar" basedir=".\">
+	<property name="vesrc" value="video-engines/src" />
+	<property name="ospsrc" value="osp/src" />
+	<property name="trackersrc" value="tracker/src" />
+	<property name="build" value="build" />
+	<property name="classes" value="${build}/classes" />
+	<property name="lib" value="${build}/jars" />
+	<property name="docs" value="${build}/docs" />
+	<property name="author" value="Douglas Brown" />
+	<path id="qtjava.zip" location="libraries/QTJava.zip" />
+	<path id="ffmpeg.jar" location="libraries/ffmpeg.jar" />
+	<path id="bridj.jar" location="libraries/bridj-0.7-SNAPSHOT.jar"/>
+	<path id="apple.jar" location="libraries/AppleJavaExtensions.jar" />
+
+	<tstamp>
+		<format property="buildtime.isoformat" pattern="yyyy-MM-dd 'T'HH:mm:ss"/>
+	</tstamp>
+
+	<!--help: list important targets-->
+	<target name="help">
+		<echo>clean: removes old build files</echo>
+		<echo>init: creates the build directories</echo>
+		<echo>compile: compiles the OSP and Tracker libraries</echo>
+		<echo>tracker_jar: creates the tracker.jar file</echo>
+		<echo>docs: creates javadoc documentation</echo>
+	</target>
+
+	<!--clean: delete the build directory-->
+	<target name="clean">
+		<delete dir="${build}"/>
+	</target>
+
+	<!--init: create the build directory-->
+	<target name="init">
+		<mkdir dir="${build}"/>
+	</target>
+
+	<!--compile: clean and recompile the source files-->
+	<target name="compile" depends="init">
+		<delete dir="${classes}/meta-inf"/>
+		<delete dir="${classes}"/>
+		<mkdir dir="${classes}"/>
+		<mkdir dir="${classes}/meta-inf"/>
+		<javac destdir="${classes}" source="1.5" debug="true" debuglevel="lines,vars,source" includeantruntime="false" encoding="Cp1252">
+			<src path="video-engines/src"/>
+			<src path="tracker/src"/>
+			<src path="osp/src"/>
+			<compilerarg value="-Xlint:-serial"/>
+			<classpath refid="qtjava.zip"/>
+			<classpath refid="ffmpeg.jar"/>
+			<classpath refid="bridj.jar"/>
+			<classpath refid="apple.jar"/>
+		</javac>
+		<copy todir="${classes}/org/opensourcephysics/resources">
+			<fileset dir="${ospsrc}/org/opensourcephysics/resources"/>
+		</copy>
+		<copy todir="${classes}/org/opensourcephysics/cabrillo/tracker/resources">
+			<fileset dir="${trackersrc}/org/opensourcephysics/cabrillo/tracker/resources"/>
+		</copy>
+	</target>
+
+	<!--tracker_jar: create the tracker.jar file-->
+	<target name="tracker_jar" depends="compile">
+		<mkdir dir="${lib}"/>
+		<manifest file="${classes}/meta-inf/TRACKER.mf">
+			<attribute name="Built-By" value="${author}"/>
+			<attribute name="Built-On" value="${buildtime.isoformat}"/>
+			<attribute name="Main-Class" value="org.opensourcephysics.cabrillo.tracker.Tracker"/>
+			<attribute name="Class-Path" value=". /usr/share/java/ffmpeg/ffmpeg.jar /usr/share/java/ffmpeg/bridj-0.7-SNAPSHOT.jar"/>
+		</manifest >
+		<jar jarfile="${lib}/tracker.jar" basedir="${classes}" manifest="${classes}/meta-inf/TRACKER.mf" includes="**/epsgraphics/,
+            **/controls/,
+            **/davidson/,
+            **/display/,
+            **/ejs/EjsRes.class,
+            **/numerics/,
+            **/tools/,
+			**/media/,
+			**/tracker/,
+            **/opensourcephysics/resources/">
+		</jar>
+	</target>
+
+	<!--docs: generate javadoc documentation-->
+	<target name="docs" depends="init">
+		<delete dir="${docs}"/>
+		<mkdir dir="${docs}"/>
+		<javadoc packagenames="org.opensourcephysics.*" destdir="${docs}" encoding="Cp1252">
+			<src path="video-engines/src"/>
+			<src path="tracker/src"/>
+			<src path="osp/src"/>
+		</javadoc>
+	</target>
+
+</project>
+
+
+

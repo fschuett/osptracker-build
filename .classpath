@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="video-engines/src"/>
+	<classpathentry kind="src" path="tracker/src"/>
+	<classpathentry kind="src" path="osp/src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="libraries/AppleJavaExtensions.jar"/>
+	<classpathentry kind="lib" path="libraries/QTJava.zip"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/ffmpeg-java"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
