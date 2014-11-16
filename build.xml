@@ -10,7 +10,7 @@
 	<property name="docs" value="${build}/docs" />
 	<property name="author" value="Douglas Brown" />
 	<path id="qtjava.zip" location="libraries/QTJava.zip" />
-	<path id="ffmpeg.jar" location="libraries/ffmpeg.jar" />
+	<path id="ffmpeg.jar" location="libraries/ffmpeg-2.3.jar" />
 	<path id="bridj.jar" location="libraries/bridj-0.7-SNAPSHOT.jar"/>
 	<path id="apple.jar" location="libraries/AppleJavaExtensions.jar" />
 
@@ -68,7 +68,6 @@
 			<attribute name="Built-By" value="${author}"/>
 			<attribute name="Built-On" value="${buildtime.isoformat}"/>
 			<attribute name="Main-Class" value="org.opensourcephysics.cabrillo.tracker.Tracker"/>
-			<attribute name="Class-Path" value=". /usr/share/java/ffmpeg/ffmpeg.jar /usr/share/java/ffmpeg/bridj-0.7-SNAPSHOT.jar"/>
 		</manifest >
 		<jar jarfile="${lib}/tracker.jar" basedir="${classes}" manifest="${classes}/meta-inf/TRACKER.mf" includes="**/epsgraphics/,
             **/controls/,
