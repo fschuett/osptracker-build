@@ -10,7 +10,7 @@
 	<property name="docs" value="${build}/docs" />
 	<property name="author" value="Douglas Brown" />
 	<path id="qtjava.zip" location="libraries/QTJava.zip" />
-	<path id="ffmpeg.jar" location="libraries/ffmpeg-2.3.jar" />
+	<path id="ffmpeg.jar" location="libraries/ffmpeg-2.6.jar" />
 	<path id="bridj.jar" location="libraries/bridj-0.7-SNAPSHOT.jar"/>
 	<path id="apple.jar" location="libraries/AppleJavaExtensions.jar" />
 
