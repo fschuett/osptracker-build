@@ -6,11 +6,11 @@ dir=$1
 
 if [ "x$dir" == "x" ]; then
 
-  find . \( -name '*.java' -o -name '*.properties' \) -exec dos2unix {} \;
+  find . \( -name '*.java' -o -name '*.properties' -o -name '*.xml' \) -exec dos2unix {} \;
   
 else
 
-  find ./$dir \( -name '*.java' -o -name '*.properties' \) -exec dos2unix {} \;
+  find ./$dir \( -name '*.java' -o -name '*.properties' -o -name '*.xml' \) -exec dos2unix {} \;
   
 fi
 
