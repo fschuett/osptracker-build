@@ -1,11 +1,15 @@
 #!/bin/bash
-# create tar archives
-tar -cvzf osptracker-osp.tar.gz --exclude=.git -C osp .
+# create tar archive
+VERSION=4.90
 
-tar -cvzf osptracker-tracker.tar.gz --exclude=.git -C tracker .
+tar -cvf osptracker-$VERSION.tar .settings libraries .project .classpath tools build.xml
 
-tar -cvzf osptracker-video-engines.tar.gz --exclude=.git -C video-engines .
+tar -rvf osptracker-$VERSION.tar --exclude=.git osp
 
-tar -cvzf osptracker-build-4.90.tar.gz .settings libraries .project .classpath tools build.xml
+tar -rvf osptracker-$VERSION.tar --exclude=.git tracker
+
+tar -rvf osptracker-$VERSION.tar --exclude=.git video-engines
+
+gzip osptracker-$VERSION.tar
 
 exit 0
