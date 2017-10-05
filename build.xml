@@ -43,7 +43,7 @@
 		<delete dir="${classes}"/>
 		<mkdir dir="${classes}"/>
 		<mkdir dir="${classes}/meta-inf"/>
-		<javac destdir="${classes}" source="1.5" debug="true" debuglevel="lines,vars,source" includeantruntime="false" encoding="Cp1252">
+		<javac destdir="${classes}" source="1.6" debug="true" debuglevel="lines,vars,source" includeantruntime="false" encoding="Cp1252">
 			<src path="video-engines/src"/>
 			<src path="tracker/src"/>
 			<src path="osp/src"/>
