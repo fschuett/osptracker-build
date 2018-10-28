@@ -79,7 +79,6 @@
 			**/media/,
 			**/tracker/,
             **/opensourcephysics/resources/">
-            <zipgroupfileset dir="libraries" includes="*.jar" />
 		</jar>
 	</target>
 
