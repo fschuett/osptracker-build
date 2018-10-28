@@ -14,13 +14,6 @@
 	<path id="bridj.jar" location="libraries/bridj-0.7-SNAPSHOT.jar"/>
 	<path id="apple.jar" location="libraries/AppleJavaExtensions.jar" />
 
-	<path id="slf4j-api.jar" location="libraries/slf4j-api.jar" />
-	<path id="logback-core.jar" location="libraries/logback-core.jar" />
-	<path id="logback-classic.jar" location="libraries/logback-classic.jar" />
-	<path id="xuggle-xuggler-5.4.jar" location="libraries/xuggle-xuggler-5.4.jar" />
-	<path id="xuggle-xuggler.jar" location="libraries/xuggle-xuggler.jar" />
-
-
 	<tstamp>
 		<format property="buildtime.isoformat" pattern="yyyy-MM-dd 'T'HH:mm:ss"/>
 	</tstamp>
@@ -59,12 +52,6 @@
 			<classpath refid="ffmpeg.jar"/>
 			<classpath refid="bridj.jar"/>
 			<classpath refid="apple.jar"/>
-
-			<classpath refid="slf4j-api.jar"/>
-			<classpath refid="logback-core.jar"/>
-			<classpath refid="logback-classic.jar"/>
-			<classpath refid="xuggle-xuggler-5.4.jar"/>
-			<classpath refid="xuggle-xuggler.jar"/>
 		</javac>
 		<copy todir="${classes}/org/opensourcephysics/resources">
 			<fileset dir="${ospsrc}/org/opensourcephysics/resources"/>

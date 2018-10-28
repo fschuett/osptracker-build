@@ -6,13 +6,6 @@
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="lib" path="libraries/AppleJavaExtensions.jar"/>
 	<classpathentry kind="lib" path="libraries/QTJava.zip"/>
-	<classpathentry kind="lib" path="libraries/ffmpeg-4.0.jar"/>
-	<classpathentry kind="lib" path="libraries/bridj-0.7-SNAPSHOT.jar"/>
-	<classpathentry kind="lib" path="libraries/xuggle-xuggler.jar"/>
-	<classpathentry kind="lib" path="libraries/xuggle-xuggler-5.4.jar"/>
-	<classpathentry kind="lib" path="libraries/slf4j-api.jar"/>
-	<classpathentry kind="lib" path="libraries/logback-core.jar"/>
-	<classpathentry kind="lib" path="libraries/logback-classic.jar"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/ffmpeg-java"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
