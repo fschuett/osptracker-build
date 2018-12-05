@@ -1,6 +1,6 @@
 #!/bin/bash
 # create tar archive
-VERSION=5.0.6
+VERSION=5.1.0.0
 
 tar -cvf osptracker-$VERSION.tar .settings libraries .project .classpath tools build.xml
 
