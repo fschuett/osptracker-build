@@ -103,7 +103,9 @@
 	</path>
 
 	<target name="compiletests" depends="compile">
-		<javac destdir="build/test" classpathref="test.classpath" srcdir="osp-tests/src" includeantruntime="false">
+		<mkdir dir="${build}/test"/>
+		<mkdir dir="${build}/test-report"/>
+		<javac destdir="${build}/test" classpathref="test.classpath" srcdir="osp-tests/src" includeantruntime="false">
 			<classpath path="${classes}"/>
 			<compilerarg value="-Xlint:-serial"/>
 		</javac>
