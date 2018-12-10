@@ -10,3 +10,20 @@ tracker_start.log
 .idea/workspace.xml
 .attach_pid*
 apache-ant-*
+
+
+# https://www.gitignore.io/api/intellij
+# partial
+
+# Generated files
+.idea/**/contentModel.xml
+
+# Sensitive or high-churn files
+.idea/**/dataSources/
+.idea/**/dataSources.ids
+.idea/**/dataSources.local.xml
+.idea/**/sqlDataSources.xml
+.idea/**/dynamic.xml
+.idea/**/uiDesigner.xml
+.idea/**/dbnavigator.xml
+
