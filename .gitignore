@@ -8,3 +8,4 @@ tracker
 /space.flv
 tracker_start.log
 .idea/workspace.xml
+.attach_pid*
