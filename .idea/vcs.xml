@@ -3,6 +3,7 @@
   <component name="VcsDirectoryMappings">
     <mapping directory="" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/osp" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/osp-tests" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/tracker" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/video-engines" vcs="Git" />
   </component>
