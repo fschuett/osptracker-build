@@ -9,3 +9,4 @@ tracker
 tracker_start.log
 .idea/workspace.xml
 .attach_pid*
+apache-ant-*
