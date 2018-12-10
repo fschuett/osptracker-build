@@ -92,6 +92,52 @@
 		</javadoc>
 	</target>
 
+
+	<!-- TESTS -->
+
+	<path id="test.classpath">
+		<pathelement path="build/test"/>
+		<pathelement path="${classes}"/>
+		<fileset dir="${ant.home}/lib" includes="*.jar" />
+	</path>
+
+	<target name="compiletests" depends="compile">
+		<javac destdir="build/test" classpathref="test.classpath" srcdir="osp-tests/src" includeantruntime="false">
+			<classpath path="${classes}"/>
+			<compilerarg value="-Xlint:-serial"/>
+		</javac>
+	</target>
+
+	<!-- https://junit.org/junit5/docs/snapshot/user-guide/#running-tests-build-ant -->
+	<target name="test.junit.launcher" depends="compiletests">
+		<junitlauncher haltOnFailure="true" printSummary="true">
+			<classpath refid="test.classpath"/>
+			<testclasses outputdir="build/test-report">
+				<fileset dir="build/test">
+					<include name="**/*Tests.class"/>
+				</fileset>
+				<listener type="legacy-xml" sendSysOut="true" sendSysErr="true"/>
+				<listener type="legacy-plain" sendSysOut="true" />
+			</testclasses>
+		</junitlauncher>
+	</target>
+
+	<!-- https://junit.org/junit5/docs/current/user-guide/#running-tests-console-launcher -->
+	<target name="test.console.launcher" depends="compiletests">
+		<java classpathref="test.classpath" classname="org.junit.platform.console.ConsoleLauncher" fork="true" failonerror="true">
+			<arg value="--scan-classpath"/>
+			<arg line="--reports-dir build/test-report"/>
+		</java>
+		<junitreport todir="build/test-report">
+			<fileset dir="build/test-report">
+				<include name="TEST-*.xml"/>
+			</fileset>
+			<report format="frames" todir="build/test-report/html"/>
+		</junitreport>
+	</target>
+
+	<target name="test" depends="test.junit.launcher, test.console.launcher" />
+
 </project>
 
 
