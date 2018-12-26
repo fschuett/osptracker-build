@@ -12,6 +12,7 @@ tracker_start.log
 .attach_pid*
 apache-ant-*
 
+osptracker-*.tar.gz
 
 # https://www.gitignore.io/api/intellij
 # partial
