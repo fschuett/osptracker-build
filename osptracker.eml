@@ -14,21 +14,6 @@
 	<lib name="bridj-0.7-SNAPSHOT.jar" scope="COMPILE">
 		<relative-module-cls project-related="jar://$PROJECT_DIR$/libraries/bridj-0.7-SNAPSHOT.jar!/"/>
 	</lib>
-	<lib name="xuggle-xuggler.jar" scope="COMPILE">
-		<relative-module-cls project-related="jar://$PROJECT_DIR$/libraries/xuggle-xuggler.jar!/"/>
-	</lib>
-	<lib name="xuggle-xuggler-5.4.jar" scope="COMPILE">
-		<relative-module-cls project-related="jar://$PROJECT_DIR$/libraries/xuggle-xuggler-5.4.jar!/"/>
-	</lib>
-	<lib name="slf4j-api.jar" scope="COMPILE">
-		<relative-module-cls project-related="jar://$PROJECT_DIR$/libraries/slf4j-api.jar!/"/>
-	</lib>
-	<lib name="logback-core.jar" scope="COMPILE">
-		<relative-module-cls project-related="jar://$PROJECT_DIR$/libraries/logback-core.jar!/"/>
-	</lib>
-	<lib name="logback-classic.jar" scope="COMPILE">
-		<relative-module-cls project-related="jar://$PROJECT_DIR$/libraries/logback-classic.jar!/"/>
-	</lib>
 	<levels>
 		<level name="ffmpeg-java" value="project"/>
 	</levels>
