@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component inheritJdk="true">
+	<exclude-output/>
+	<contentEntry url="file://$MODULE_DIR$"/>
+	<lib name="AppleJavaExtensions.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/libraries/AppleJavaExtensions.jar!/"/>
+	</lib>
+	<lib name="QTJava.zip" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/libraries/QTJava.zip!/"/>
+	</lib>
+	<lib name="ffmpeg-4.0.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/libraries/ffmpeg-4.0.jar!/"/>
+	</lib>
+	<lib name="bridj-0.7-SNAPSHOT.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/libraries/bridj-0.7-SNAPSHOT.jar!/"/>
+	</lib>
+	<levels>
+		<level name="ffmpeg-java" value="project"/>
+	</levels>
+</component>

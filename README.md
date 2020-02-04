@@ -1,7 +1,7 @@
 osptracker-build
 ================
 
-eclipse build files for tracker
+eclipse and IntelliJ Idea build files for tracker
 
 requirements
 ------------
@@ -11,12 +11,34 @@ ffmpeg-java: https://github.com/fschuett/ffmpeg
 
 build instructions
 ------------------
-checkout this build environment
-checkout osp, video-engines, tracker as subdirs
+1. Clone this repository
 
+2. Clone repositories `osp`, `video-engines` and `tracker` as subdirs.
+You can find the repositories at
+https://github.com/fschuett?tab=repositories
+or
+https://github.com/nickkolok?tab=repositories
+
+3. Run Tracker using the preferred IDE or  run
+```
 ant tracker_jar
+```
+to build a jar application file: `build/jars/tracker.jar`
 
-application: build/jars/tracker.jar
+running tests
+-------------
+
+1. Clone repository `osp-tests` to a subdir.
+You can find the repository at
+https://github.com/nickkolok?tab=repositories
+
+2. Run
+```
+ant test
+```
+
+3. If you have `ant` configuration problems, you may try to install local `ant` using `tools/install_ant.sh`.
+
 
 installation instructions
 -------------------------
